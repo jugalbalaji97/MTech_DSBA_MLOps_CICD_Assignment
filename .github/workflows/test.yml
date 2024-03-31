@@ -2,8 +2,9 @@ name: Test
 
 on :
   workflow_run:
-    workflows: [ Train ]
-    types: [ completed ]
+    workflows: ["Train"]
+    types: 
+        - completed
 
 jobs:
 
