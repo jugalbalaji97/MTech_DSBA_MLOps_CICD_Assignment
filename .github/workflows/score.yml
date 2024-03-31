@@ -51,7 +51,7 @@ jobs:
 
       - name: Test model
         run: |
-          OUTPUT=$(docker run score_test:v1)
+          OUTPUT=$(docker run ${{ secrets.DOCKERHUB_USERNAME }}/score_test:v1)
           echo "Score:"
           echo "$OUTPUT"
           if [[ `echo "$OUTPUT 0.50" | awk '{print ($1 < $2)}'` == 1 ]]; then echo "Insufficient Accuracy" && exit 1; fi
