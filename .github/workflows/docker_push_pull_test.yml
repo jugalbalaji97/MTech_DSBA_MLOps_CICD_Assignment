@@ -1,4 +1,4 @@
-name: Train
+name: Docker Build, Push, Pull and Test
 
 on :
   pull_request:
